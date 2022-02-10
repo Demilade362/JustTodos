@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script defer src="bootstrap.min.js"></script>
+	<title>TodoList Web</title>
+</head>
+
+<style>
+	#list {
+		list-style-type: none;
+	}
+	#badge{
+		position: relative;
+		top: -5px;
+	}
+	.container{
+		max-width: 860px;
+	}
+</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark py-3" style="background: rgb(5, 13, 139)">
+		<div class="container">
+			<div class="navbar-brand">
+				Just-Todo
+			</div>
+			<button class="navbar-toggler" type="button" data-bs-target="#navmenu" data-bs-toggle="collapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link active">TodoList
+						<span class="badge badge-white bg-danger" id="badge">1</span></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://facebook.com/oluwademilade.abatan01?refid=12" class="nav-link">Contact Developer</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="https://facebook.com/oluwademilade.abatan01?refid=12" class="btn btn-primary">
+							<span class="me-2" style="position:relative; top:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+							  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+							</svg></span>View Developer's Page</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+		<div class="container mt-5 p-2 d-flex align-items-center justify-content-around" id="container-two">
+			<div class="card p-3 shadow" style="width: 25rem;">
+				<h1 class="text-center mb-3">My Todos</h1>
+			<div class="d-lg-flex justify-content-between">
+				<input type="text" class="form-control rounded-pill" id="inputbox" placeholder="Input Your Todo">
+				<hr class="d-lg-none">
+				<button class="btn btn-warning ms-3 btn-sm" id="submit">Submit Todo</button>
+			</div>
+				<ul id="list" class="list-group mt-4 text-start">
+				</ul>
+		</div>
+	</div>
+	<script src="app.js">
+		for (var i = 0; i < list.children.length; i++) {
+    if(list.children[i].nodeValue === null && list.children[i].innerText === "" && list.children[i].outerText === "")
+
+        list.children[i].remove();
+        // list.children[i].nodeValue = "Welcome To JustTodos";
+        // list.children[i].outerText = "Welcome To JustTodos";
+    //     list.children[i].innerHTML = 
+    //   list.innerHTML += `<li class = 'list-group-item rounded-pill p-3 d-flex justify-content-between todo'>Welcome to JustTodos
+    //     <button class="btn btn-danger text-light delete">
+    //   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style = "pointer-events: none;" class="bi bi-trash" viewBox="0 0 16 16">
+    //   <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+    //   <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+    // </svg>
+    // </button>
+    //   </li>`;
+  }
+	</script>
+</body>
+
+</html>
